@@ -1,0 +1,19 @@
+{
+  "name": "A.P.E.X.",
+  "short_name": "APEX",
+  "description": "Sistema pessoal de evolução e desenvolvimento.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080d18",
+  "theme_color": "#080d18",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
