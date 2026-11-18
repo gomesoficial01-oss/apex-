@@ -6,7 +6,15 @@
 <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#080d18">
 <meta name="apple-mobile-web-app-capable" content="yes">
-</head><body>
+</head><script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js')
+      .then(() => console.log('Aplicativo pronto!'))
+      .catch(error => console.log('Erro:', error));
+  });
+}
+</script><body>
 <header><div class="row"><div><div class="logo">A.P.E.X.</div><div class="sub">PERSONAL EVOLUTION SYSTEM</div></div><span class="tag">● SISTEMA LOCAL ATIVO</span></div><nav><button class="active" data-tab="home">Painel</button><button data-tab="areas">Áreas</button><button data-tab="diary">Diário</button><button data-tab="review">Revisão</button></nav></header>
 <main>
 <section id="home"><div class="hero"><div class="eyebrow">CENTRAL DE COMANDO</div><h1>Construa sua próxima versão.</h1><p class="muted">Conhecimento aplicado. Pequenas ações consistentes. Evolução mensurável.</p><span class="tag" id="date"></span></div>
