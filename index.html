@@ -1,33 +1,75 @@
 <!doctype html>
-<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#080d18"><title>A.P.E.X.</title>
-<style>
-:root{--bg:#080d18;--p:#101a2b;--line:#243650;--t:#edf4ff;--m:#91a5c2;--c:#58d9f5;--b:#6d8cff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#19375a,transparent 42%),var(--bg);color:var(--t);font:15px system-ui}header{padding:20px 16px 10px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#080d18ed;z-index:2}.logo{font-size:26px;font-weight:900;letter-spacing:5px}.sub,.eyebrow{font-size:10px;letter-spacing:2px;color:var(--c)}nav{display:flex;gap:7px;overflow:auto;padding-top:12px}button{cursor:pointer}nav button,.secondary{background:transparent;color:var(--m);border:1px solid var(--line);padding:9px 12px;border-radius:10px;white-space:nowrap}nav button.active{color:var(--c);border-color:var(--c);background:#153047}main{max-width:850px;margin:auto;padding:17px}.hero,.card{border:1px solid var(--line);border-radius:15px;padding:16px;background:var(--p);margin:12px 0}.hero{background:linear-gradient(135deg,#142944,#101a2b)}h1{font-size:25px;margin:8px 0}h2{font-size:18px;margin:22px 0 10px}.muted,.label{color:var(--m);line-height:1.5}.label,.small{font-size:12px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.metric{font-size:27px;font-weight:800}.tag{font-size:10px;color:var(--c);border:1px solid #28506a;padding:4px 8px;border-radius:20px}.bar{height:7px;background:#26364c;border-radius:8px;margin-top:9px;overflow:hidden}.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--b),var(--c))}.mission{border-left:3px solid var(--c);padding:12px;background:#0c1b2b;line-height:1.5}input,textarea,select{width:100%;background:#091321;border:1px solid var(--line);border-radius:9px;color:var(--t);padding:11px;margin:6px 0 12px;font:inherit}textarea{min-height:80px}label{font-size:12px;color:var(--m)}.primary{background:linear-gradient(90deg,#397de0,#35bcd7);border:0;color:white;font-weight:700;padding:12px 15px;border-radius:10px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.hidden{display:none!important}.foot{text-align:center;color:#71849f;font-size:11px;padding:22px}@media(min-width:650px){.grid{grid-template-columns:repeat(4,1fr)}}
-</style>
-<link rel="manifest" href="./manifest.json">
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#080d18">
 <meta name="apple-mobile-web-app-capable" content="yes">
-</head><script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js')
-      .then(() => console.log('Aplicativo pronto!'))
-      .catch(error => console.log('Erro:', error));
-  });
-}
-</script><body>
-<header><div class="row"><div><div class="logo">A.P.E.X.</div><div class="sub">PERSONAL EVOLUTION SYSTEM</div></div><span class="tag">● SISTEMA LOCAL ATIVO</span></div><nav><button class="active" data-tab="home">Painel</button><button data-tab="areas">Áreas</button><button data-tab="diary">Diário</button><button data-tab="review">Revisão</button></nav></header>
+<link rel="manifest" href="./manifest.json">
+<title>A.P.E.X.</title>
+<style>
+:root{--bg:#080d18;--p:#101a2b;--line:#243650;--t:#edf4ff;--m:#91a5c2;--c:#58d9f5;--b:#6d8cff}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 80% -10%,#19375a,transparent 42%),var(--bg);color:var(--t);font:15px system-ui}
+header{padding:20px 16px 10px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#080d18ed;z-index:2}
+.logo{font-size:26px;font-weight:900;letter-spacing:5px}
+.sub,.eyebrow{font-size:10px;letter-spacing:2px;color:var(--c)}
+nav{display:flex;gap:7px;overflow:auto;padding-top:12px}
+button{cursor:pointer}
+nav button,.secondary{background:transparent;color:var(--m);border:1px solid var(--line);padding:9px 12px;border-radius:10px;white-space:nowrap}
+nav button.active{color:var(--c);border-color:var(--c);background:#153047}
+main{max-width:850px;margin:auto;padding:17px}
+.hero,.card{border:1px solid var(--line);border-radius:15px;padding:16px;background:var(--p);margin:12px 0}
+.hero{background:linear-gradient(135deg,#142944,#101a2b)}
+h1{font-size:25px;margin:8px 0}
+h2{font-size:18px;margin:22px 0 10px}
+.muted,.label{color:var(--m);line-height:1.5}
+.label,.small{font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.metric{font-size:27px;font-weight:800}
+.tag{font-size:10px;color:var(--c);border:1px solid #28506a;padding:4px 8px;border-radius:20px}
+.bar{height:7px;background:#26364c;border-radius:8px;margin-top:9px;overflow:hidden}
+.bar span{display:block;height:100%;background:linear-gradient(90deg,var(--b),var(--c))}
+.mission{border-left:3px solid var(--c);padding:12px;background:#0c1b2b;line-height:1.5}
+input,textarea,select{width:100%;background:#091321;border:1px solid var(--line);border-radius:9px;color:var(--t);padding:11px;margin:6px 0 12px;font:inherit}
+textarea{min-height:80px}
+label{font-size:12px;color:var(--m)}
+.primary{background:linear-gradient(90deg,#397de0,#35bcd7);border:0;color:white;font-weight:700;padding:12px 15px;border-radius:10px}
+.primary:disabled{opacity:.5;cursor:not-allowed}
+.row{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.hidden{display:none!important}
+.foot{text-align:center;color:#71849f;font-size:11px;padding:22px}
+@media(min-width:650px){.grid{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header>
+<div class="row">
+<div>
+<div class="logo">A.P.E.X.</div>
+<div class="sub">PERSONAL EVOLUTION SYSTEM</div>
+</div>
+<span class="tag">● SISTEMA LOCAL ATIVO</span>
+</div>
+<nav>
+<button class="active" data-tab="home">Painel</button>
+<button data-tab="areas">Áreas</button>
+<button data-tab="diary">Diário</button>
+<button data-tab="review">Revisão</button>
+</nav>
+</header>
 <main>
-<section id="home"><div class="hero"><div class="eyebrow">CENTRAL DE COMANDO</div><h1>Construa sua próxima versão.</h1><p class="muted">Conhecimento aplicado. Pequenas ações consistentes. Evolução mensurável.</p><span class="tag" id="date"></span></div>
-<h2>Seu progresso</h2><div class="grid"><div class="card"><div class="label">Dias registrados</div><div class="metric" id="days">0</div></div><div class="card"><div class="label">Missões concluídas</div><div class="metric" id="done">0</div></div><div class="card"><div class="label">Práticas registradas</div><div class="metric" id="entries">0</div></div><div class="card"><div class="label">Sequência atual</div><div class="metric" id="streak">0</div></div></div>
-<h2>Missão de hoje</h2><div class="card"><div class="mission" id="mission"></div><p><button class="primary" id="complete">Concluir missão</button> <span class="muted small" id="state"></span></p></div><h2>Atividade por área</h2><div id="mini"></div></section>
-<section id="areas" class="hidden"><div class="eyebrow">MAPA DE DESENVOLVIMENTO</div><h1>Seis áreas fundamentais</h1><p class="muted">Acompanhe suas práticas e construa evidências de evolução.</p><div id="areaList"></div></section>
-<section id="diary" class="hidden"><div class="eyebrow">REGISTRO DE EXECUÇÃO</div><h1>Diário de evolução</h1><form id="form"><label>Área trabalhada</label><select id="area"></select><label>O que pratiquei ou estudei?</label><textarea id="activity" required></textarea><label>O que aprendi?</label><textarea id="learning"></textarea><label>Nota de execução (0 a 10)</label><input id="score" type="number" min="0" max="10" value="5"><button class="primary">Salvar registro</button></form><h2>Registros recentes</h2><div id="history"></div></section>
-<section id="review" class="hidden"><div class="eyebrow">AVALIAÇÃO E AJUSTE</div><h1>Revisão pessoal</h1><div class="card"><p class="muted">1. Qual foi minha principal vitória?<br>2. Onde falhei e por quê?<br>3. O que aprendi e consigo explicar sem consultar?<br>4. Qual comportamento preciso repetir?<br>5. Qual será meu próximo passo verificável?</p><textarea id="reviewText" placeholder="Responda às perguntas..."></textarea><button class="primary" id="saveReview">Salvar revisão</button></div><div class="card"><p class="muted small">Seus dados ficam neste navegador e aparelho nesta versão. Exporte uma cópia periodicamente.</p><button class="secondary" id="export">Exportar meus dados</button> <label class="secondary">Importar<input id="import" type="file" accept="application/json" style="display:none"></label></div></section><div class="foot">A.P.E.X. v1.0 · Evolução consistente</div>
-</main>
-<script>
-const areas=[["Inteligência emocional","Reconhecer emoções, regular impulsos e responder com consciência."],["Inteligência intrapessoal","Autoconhecimento, disciplina, foco e autorresponsabilidade."],["Inteligência interpessoal","Comunicação, empatia, relacionamentos e liderança."],["Inteligência linguística","Vocabulário, interpretação, escrita, oratória e idiomas."],["Conhecimento geral","Filosofia, Bíblia, ciência, história e pensamento crítico."],["Desenvolvimento profissional e financeiro","Vendas, empreendedorismo, gestão e educação financeira."]];
-const missions=[["Inteligência emocional","Em uma situação desconfortável, pare por 10 segundos. Nomeie a emoção, identifique o pensamento e escolha uma resposta consciente."],["Inteligência intrapessoal","Escolha uma tarefa importante e trabalhe nela por 20 minutos sem alternar de atividade."],["Inteligência interpessoal","Pratique escuta ativa: não interrompa, resuma o que entendeu e só depois responda."],["Inteligência linguística","Leia por 15 minutos e escreva um resumo de cinco frases sem copiar."],["Conhecimento geral","Estude um conceito por 20 minutos. Depois explique-o em voz alta como se ensinasse alguém."],["Desenvolvimento profissional e financeiro","Observe um problema real de um cliente ou negócio e escreva uma solução que crie valor."]];
-const key="apex_v1";let d=JSON.parse(localStorage.getItem(key)||'{"logs":[],"completed":[],"reviews":[]}');const now=new Date(),today=now.toISOString().slice(0,10),idx=Math.floor(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate())/86400000)%6;const $=id=>document.getElementById(id);const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));function save(){localStorage.setItem(key,JSON.stringify(d));render()}function render(){ $("date").textContent=now.toLocaleDateString("pt-BR",{weekday:"long",day:"2-digit",month:"long"});$("mission").innerHTML="<b>"+missions[idx][0]+":</b> "+missions[idx][1];$("done").textContent=d.completed.length;$("entries").textContent=d.logs.length;$("days").textContent=new Set(d.logs.map(x=>x.date).concat(d.completed)).size;let n=0,dt=new Date();let set=new Set(d.logs.map(x=>x.date).concat(d.completed));while(set.has(dt.toISOString().slice(0,10))){n++;dt.setDate(dt.getDate()-1)}$("streak").textContent=n;$("state").textContent=d.completed.includes(today)?"Concluída ✓":"";$("complete").disabled=d.completed.includes(today);$("area").innerHTML=areas.map((a,i)=>`<option value="${i}">${a[0]}</option>`).join("");$("areaList").innerHTML=areas.map((a,i)=>{let c=d.logs.filter(x=>x.area===i).length;return `<div class="card"><div class="row"><b>${a[0]}</b><span class="tag">${c} práticas</span></div><p class="muted small">${a[1]}</p><div class="bar"><span style="width:${Math.min(100,c*10)}%"></span></div></div>`}).join("");$("mini").innerHTML=areas.map((a,i)=>`<p class="small">${a[0]} · ${d.logs.filter(x=>x.area===i).length} práticas</p><div class="bar"><span style="width:${Math.min(100,d.logs.filter(x=>x.area===i).length*10)}%"></span></div>`).join("");$("history").innerHTML=d.logs.slice().reverse().slice(0,10).map(x=>`<div class="card"><div class="row"><b>${areas[x.area][0]}</b><span class="tag">${x.date} · ${x.score}/10</span></div><p>${esc(x.activity)}</p><p class="muted small">${esc(x.learning)}</p></div>`).join("")||'<p class="muted">Nenhum registro ainda.</p>'}
-document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{document.querySelectorAll("nav button").forEach(x=>x.classList.toggle("active",x===b));["home","areas","diary","review"].forEach(t=>$(t).classList.toggle("hidden",t!==b.dataset.tab))});
-$("complete").onclick=()=>{if(!d.completed.includes(today))d.completed.push(today);save()};$("form").onsubmit=e=>{e.preventDefault();d.logs.push({date:today,area:+$("area").value,activity:$("activity").value,learning:$("learning").value,score:Math.max(0,Math.min(10,+$("score").value||0))});e.target.reset();save()};$("saveReview").onclick=()=>{if($("reviewText").value.trim()){d.reviews.push({date:today,text:$("reviewText").value});$("reviewText").value="";save();alert("Revisão salva.")}};$("export").onclick=()=>{let a=document.createElement("a"),u=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)],{type:"application/json"}));a.href=u;a.download="apex-dados.json";a.click();URL.revokeObjectURL(u)};$("import").onchange=async e=>{try{let v=JSON.parse(await e.target.files[0].text());if(Array.isArray(v.logs)&&Array.isArray(v.completed)){d=v;save();alert("Importação concluída")}else alert("Arquivo inválido")}catch{alert("Não foi possível importar")}};render();
-</script></body></html>
+<section id="home">
+<div class="hero">
+<div class="eyebrow">CENTRAL DE COMANDO</div>
+<h1>Construa sua próxima versão.</h1>
+<p class="muted">Conhecimento aplicado. Pequenas ações consistentes. Evolução mensurável.</p>
+<span class="tag" id="date"></span>
+</div>
+<h2>Seu progresso</h2>
+<div class="grid">
+<div class="card"><div class="label">Dias registrados</div><div class="metric" id="days">0</div></div>
+<div class="card"><div class="label">Missões concluídas</div><div class="metric" id="done">0</div></div>
+<div class="card"><div class="label">Práticas registradas</div><div class="metric" id="entries">0</div></div>
+<div class="card"><div class="label">Sequência atual</div><div class="metric" id="streak">0</div></div>
+</div>
